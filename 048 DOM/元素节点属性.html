@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				parentNode	返回当前节点的父节点
+				previousSibibling 返回当前节点的前一个同级节点
+				nextSibling  返回当前节点的后一个同级节点
+				
+				
+				
+				
+				属性节点
+				attribute返回该节点的属性节点集合
+				集合特点：不重复，无序
+				
+				attribute.length：返回属性节点的个数*/ 
+			window.onload = function(){
+				var oDiv = document.getElementById("div1");
+				
+				alert(oDiv.attributes.length	);
+			}	
+		</script>
+	</head>
+	<body>
+		<span></span>
+		<div id="div1" title = "hello" name = "world" class="box"></div>
+		<p></p>
+	</body>
+</html>

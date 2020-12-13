@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			
+/* 			多分支语句 SWTICH
+			格式:
+			switch(表达式){
+				case 常量1:
+				语句1;
+				break;
+			
+			case 常量1:
+				语句1;
+				break;
+			
+			case 常量1:
+				语句1;
+				break;
+			default;
+				若果上述语句都不成立,执行的语句;
+				break;
+			}
+			规律:表达式的结果等于那个case的常量,则执行相应的语句,
+				都不满足则执行default的语句
+				 break不可省略，会发生事件穿透
+				 default，一般情况不要省略，会发生歧义
+				 */
+				
+// 1.按照考试成绩的等级,输出百分之数段
+			var grade = "D";
+			switch(grade){
+				case "A":
+					alert("成绩为80~100");
+					break;
+				case "B":
+					alert("成绩为70~79");
+					break;
+				case "C":
+					alert("成绩为60~69");
+					break;
+				case "D":
+					alert("成绩小于60");
+					break;
+				default:
+					alert("error");
+					break;	
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

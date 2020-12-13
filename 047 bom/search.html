@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				？id=5&search=ok
+				获取url中search，通过传入对应key，返回key对应的value
+				例：传入ID，返回5
+			*/
+			// 创建函数有两个参数 seacrh和key
+			function getValue(search, key) {
+				// 找出key第一次出现的位置，
+				// indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+				// search为搜索的字符串值，key为要搜索的值
+				var start = search.indexOf(key);
+				if (start == -1) {
+					return;
+					// 如果indexof没有找到则返回值为-1，直接return
+				} else {
+					// 找到之后，找到结束的位置
+					var end = search.indexOf("&", start);
+					// 在searc字符串的start位置开始寻找第一个出现的 & 符号，并定义end
+					if (end == -1) {
+						end = search.length;
+						// 如果没有找到 & 符号 则整个字符串都应为 key的值
+					}
+				}
+				// substring() 方法用于提取字符串中介于两个指定下标之间的字符
+				var str = search.substring(start, end);
+				alert(str);
+			}
+			var search = "？id=5&search=ok";
+			getValue(search,"id");
+			// 调用函数 搜索search中的key值（key值为从 id 到 & 值结束）
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

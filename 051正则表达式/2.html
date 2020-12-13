@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* 
+				特殊字符
+							1  “.”：除了换行符之外的所有单个字符
+							2.“*”：重复多次匹配，匹配任意次 0~n
+							3."+": 至少有一次匹配
+							4.“？”进行0~1次匹配
+							5."[]表示正则表达式在字符串中可以出现的范围 例[a-z]/[0~9]:如果字符串中出现了[a-z]/[0-9]则就会返回true"
+							6.\w 数字字母下划线，等同于[0-9a-zA-Z/]
+							  \W 非数字字母下划线
+							 7.\d 表示数字[0-9]
+							   \D 非数字
+							 8. \s 空格  、
+							 9. {m,n}:至少匹配m 至多匹配n次 
+							10.检测是否是以 /^匹配开始 $/匹配结尾
+							11.|:或
+							12.（）分组 将内容作为一个整体作为匹配
+							13 $1 $2 交换内容
+			*/
+							
+							// 1
+							var reg = /g..gle/gi;
+							var str = "google--gle";
+							console.log(reg.test(str));
+							// 2
+							var reg1 = /g*gle/gi;
+							var str1 = "gle";
+							console.log(reg1.test(str1),str1.match(reg1)); 
+							// 3
+							var reg2 = /g+gle/gi;
+							var str2 = "ggle";
+							console.log(reg1.test(str2),str1.match(reg2)); 
+							// 4
+							var reg4 = /g?gle/gi;
+							var str4 = "ggggggggle";
+							console.log(reg4.test(str4),str4.match(reg4));
+							// 5
+							var reg5 = /[a-z]/ig;
+							 var str5 = "123568m88";
+							 console.log(reg5.test("str5"));
+							 // 6
+							 var reg6 = /\w+/ig;
+							  var str5 = "123568m88";
+							  console.log(reg6.test("str6"));
+							  // 8
+							  var reg8 = /\s+/ig;
+							   var str8 = "12     3568m88";
+							  // 替换，去掉空格
+							   console.log(str8.replace(reg8,""));
+							 // 9
+							var reg9 = /go{1,5}gle/ig;
+							var str9 = "gooogle";
+							console.log(reg9.test(str9));
+							// 10
+							var reg10 = /g^.+ g$/ig;
+							var str10 = "google";
+							console.log(reg10.test(str10));
+							//12.
+							var reg12 = /(google)/ig;
+							var str12 = "goooglegooglegooglegoogle";
+							console.log(reg12.test(str12));
+							//13
+							var reg13 = /(.*)\s(.*)/;
+							var str13 = "taobao baidu";
+							console.log(str13.replace(reg13,"$2 $1"));
+		</script>
+	</body>
+</html>

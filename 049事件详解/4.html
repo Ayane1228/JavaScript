@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width: 500px;
+				height: 500px;
+				border: 1px solid #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<input type="text" />
+		<input type="button" value="发布" />
+		<script type="text/javascript">
+			var oDiv = document.getElementsByTagName("div")[0];
+			var aInput = document.getElementsByTagName("input");
+			aInput[1].onclick = commentTxt
+			function commentTxt(){
+				// 将按钮中的值加到div的innerhtml中
+					oDiv.innerHTML += aInput[0].value;
+			}
+				aInput[0].onkeydown = function(e){
+					var evt = e || event;
+					if(evt.keyCode == 13){
+						commentTxt();
+					}
+				}
+		</script>
+	</body>
+</html>

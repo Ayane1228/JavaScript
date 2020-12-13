@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				open（）；
+				参数
+						1.加载的url，只有一个参数会打开新窗口加载url
+						2.窗口的名称或者窗口的目标，当有第二个参数是给打开的新窗口起一个名字，以后再去url就会在已经有名字的窗口加载url，不会打开新窗口
+						3.一串有特殊意义的字符串,规定打开窗口的大小，位置
+						*/
+						window.onload = function(){
+							var oBtn = document.getElementById("btn");
+							oBtn.onclick = function(){
+								open("https://www.baidu.com/","百度","width = 400,height = 400,top = 200, left = 200");
+							}
+						}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="按钮" />
+	</body>
+</html>

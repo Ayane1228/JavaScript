@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+				/*
+					break语句：
+					1.在Switch语句中跳出循环
+					2.在选择语句中使流程跳出当前循环
+				*/
+			   // 0~100中I+1%5==0时，break
+			   
+/* 			   for(var i = 0;i < 100; i ++)
+					{
+						if((i + 1) % 5 == 0){
+						break;
+				   }
+				document.write(i+"<br />");
+			   } */
+			   // continue语句：
+			   // 循环语句中执行,使得本次循环结束,跳过循环体中没有执行的部分,直接进行示范继续循环的判断
+			   for(var i = 0;i < 100; i ++)
+			   					{
+			   						if((i + 1) % 5 == 0){
+			   						continue;
+			   				   }
+			   				document.write(i+"<br />");
+			   }
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

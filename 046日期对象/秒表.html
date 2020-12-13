@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#div1 {
+				width: 300px;
+				height: 400px;
+				background-color: gray;
+				margin: 100px auto;
+				text-align: center;
+			}
+
+			#count {
+				width: 200px;
+				height: 150px;
+				line-height: 150px;
+				margin: auto;
+				font-size: 40px;
+
+			}
+
+			#count input {
+				width: 150px;
+				height: 40px;
+				font-size: 25px;
+				margin-top: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			// 封装一个$函数调用查找id
+			function $(id) {
+				return document.getElementById(id);
+			}
+			// 封装一个函数处理小于10的数字为0+num；
+			function showNum(num) {
+				if (num < 10) {
+					return "0" + num;
+				} else {
+					return num;
+				}
+			}
+			// 点击开始按钮之后开始计数
+			window.onload = function() {
+				// 定义一个总秒数（count）
+				var count = 0;
+				// 定义计时器的名字（timer）
+				var timer = null;
+				// 点击start时调用函数
+				$("start").onclick = function() {
+					// 调用计时器
+					timer = setInterval(function() {
+						// count++
+						count++;
+						// 改变“id_S”中的内容为count%60，并调用showNum对结果进行处理
+						$("id_S").innerHTML = showNum(count % 60);
+						// 改变“id_M”中的内容为count/60取整之后对60取余，并调用showNum对结果进行处理
+						$("id_M").innerHTML = showNum(parseInt(count / 60) % 60);
+						// 改变“id_H”中的内容为count%3600，并取整（parse），并调用showNum对结果进行处理
+						$("id_H").innerHTML = showNum(parseInt(count / 3600));
+					}, 1000)
+				}
+				// 给暂停按钮添加click时间
+				$("pause").onclick = function() {
+					// 取消定时器
+					clearInterval(timer);
+				}
+				// 停止 停止计数，（1）数据清理，（2）页面上的数据清零
+				$("stop").onclick = function() {
+					// 清除定时器
+					clearInterval(timer);
+					// 总秒速清零
+					count = 0;
+					// 当前数据清零
+					$("id_S").innerHTML = "00";
+					$("id_M").innerHTML = "00";
+					$("id_H").innerHTML = "00";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="count">
+				<span id="id_H">00</span>
+				<span id="id_M">00</span>
+				<span id="id_S">00</span>
+			</div>
+			<input type="button" id="start" value="开始" />
+			<input type="button" id="pause" value="暂停" />
+			<input type="button" id="stop" value="停止" />
+		</div>
+	</body>
+</html>

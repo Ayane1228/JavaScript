@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+ // 		var a = 10;
+	// 	function sum(){
+	// 		a = 5;
+	// 	}
+	// alert(a);
+	// 	sum();
+	// 	alert(a); 
+		// var a = 10;
+		// 		function sum(){
+		// 		var	a = 5;
+		// 		alert(a);
+		// 		}
+		// 		alert(a);
+		// 		sum();
+		// 		alert(a);
+		// 		// 10
+		// 		// 5
+		// 		// 10 
+// 作用域：起作用的有效范围
+// 全局作用域：全局作用域声明的变量：全局变量
+// 局部作用域： 函数 局部变量的作用周期和生效范围都在声明的函数区域，函数调用完成之后就会销毁，
+ // 全局作用域和局部作用域 变量重名，采取就近原则
+				function sum(){
+					var a = 5;
+					alert(a);
+				}
+				sum();
+				alert();
+				// 只有sum中alert才有用，sum之后sum中的a自动销毁
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

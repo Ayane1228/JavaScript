@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				查找元素节点方法
+								1.document.getElementById（id）;
+								属性
+										tagname;获取元素节点的标签名
+										innerHtml：获取元素节点标签内的内容
+			*/
+		   window.onload = function(){
+			   var oDiv = document.getElementById("div1");
+				alert(oDiv);
+				alert(oDiv.tagName);
+				alert(oDiv.innerHTML);
+				oDiv.innerHTML = "<h1>wo<h1>";
+				// 可以替换元素内的内容
+				alert(oDiv.style.backgroundColor);
+				// 访问用 - 链接的属性时将 -去掉后续单词首字母改为大写
+		   }
+		</script>
+		</head>
+	<body>
+		<div id="div1" style="background-color: pink;"><span>span</span> </div>
+	</body>
+</html>

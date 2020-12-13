@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				replace()
+				[格式]：字符串.replace（匹配的字符串/正则表达式，替换成新的字符串）
+				返回值：替换完成的字符串
+				如果有重复只能替换第一个	
+				想替换所有复合条件的字符串，就必须使用正则表达式(加上g，忽略大小写要加i)
+				*/
+					var s ="I LOVE LOVE YOU";
+					document.write(s.replace("LOVE","LIKE") + "<br />");
+					var t ="I LOVE LOVE YOU";
+					document.write(t.replace(/LOVE/g,"LIKE")+ "<br />");
+					
+				/*
+					substring（）
+					格式：字符串.substring（start，end）
+					提取字符串，在制定范围内，提取字符串
+					返回值：提取到的新字符串[不包含结束位，0~3，新字符串：0,1,2]
+					*/
+				   var r = "一分钟那又如何";
+				   document.write(r.substring(0,3)+ "<br />");
+				   
+				   /* 
+						字符串分割
+						split
+						格式：字符串.split（分隔符，生成的数组长度）；
+						返回值；通过分隔符，分割成的装有子串的数组
+						分隔符：整体
+						一般不添加生成的数组长度
+						会分割出空字符串
+						如果分隔符是空“”，那么我们字符串会分割成单个字符。
+						一般使用" "来做分隔符。
+						字符串==>数组（split）==>字符串（join）
+					*/
+				   
+				   var str = "I LOVE YOU";
+				   document.write(str.split("")+ "<br />");
+				
+				//join
+				var arr = new Array(3)
+				arr[0] = "George"
+				arr[1] = "John"
+				arr[2] = "Thomas"
+				
+				document.write(arr.join())
+					
+					
+					
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

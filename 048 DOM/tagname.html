@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				document.getElementsByTagName() 
+				参数：标签名
+				获取：获取当前页面上符合该标签名的元素节点
+				只支持从document节点去访问
+				name属性只有文本输入框的元素节点才设置
+				node.document.getElementsByTagName（）;
+				从node节点找出符合所有符合条件的元素节点*/
+				window.onload = function(){
+						//获取当前页面上所有的li标签
+				
+				var aLis = document.getElementsByTagName("li");
+				 alert(aLis);
+				 alert(aLis.length);
+				 var oul = document.getElementsByTagName('li');
+				 // alert(aLis.length);
+				 // 返回值：html元素数组合集，所有符合改签名标准的元素节点
+				 // 返回值：[object HTMLCollection]
+				}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<ol>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+	</body>
+</html>

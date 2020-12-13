@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#outer{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+			#inner{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="inner"></div>
+		</div>
+		<script type="text/javascript">
+			var outer = document.getElementById("outer");
+			var inner = document.getElementById("inner");
+			// 添加事件监听器
+			outer.addEventListener("click ",foo,false);
+			// 移除事件监听器：outer.removeEventListener("click",foo)
+			
+			// 事件的操作，调用函数名，布尔值
+			// 编写函数
+			function foo(){
+				console.log("outer");
+			}
+		</script>
+	</body>
+</html>

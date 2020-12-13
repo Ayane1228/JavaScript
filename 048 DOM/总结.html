@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 	
+					id document.getElementById（）
+					tagname node.getElementsByTagname（）
+					name document.getElementsByName（）
+					classname document.getElementsByClassname
+			*/
+		   /* 
+					封装函数，简化操作
+					封装一个函数拥有上述几种获取几种获取元素节点的功能
+					
+					#id
+					.class
+					tagname
+					name = xxx*/
+			function $(vArg){
+				// 1.对参数进行区分
+				 switch(vArg[0])
+				 // 传入字符串第一个字符
+				 {
+					 case"#":
+					 // 如果是id选择器
+					 return document.getElementById(vArg.substr(1));
+					 break;
+					 // 返回值为获取id选择器并从字符串下表为1的字符开始获取
+					 
+					 case".":
+					 // classname
+					 return elementByClassName(document,vArg.substring(1));
+						break;
+					  default:	
+					  var str = vArg.substring(0,5);
+					   if(str == "name=")
+						// 如果下标从0到5为name=，返回值为获取字符串从下标为5开始的字符串
+					   {
+						   return document.getElementsByName(vArg.substring(5));
+					   }
+					   else{
+						   return document.getElementsByTagName(vArg);
+					   }
+					 break;
+				 }
+				}	
+				   function getElementsByClassname(parent,classStr){
+					   // 找到parent下所有的元素节点
+					   var nodes = parent.getElementsByTagName('*')
+					   var result = [];
+					   for(var i = 0;i < nodes.length; i++){
+						   // 如果符合条件，添加到数组中
+						   if(nodes[i].className == classStr){
+							   result.push(nodes[i]);
+						   }
+					   }
+					   return result;
+				   }
+				   
+				window.onload = function(){
+					alert($(".box")[1].innerHTML);
+					
+				}
+		</script>
+	</head>
+	<body>
+		<div id="div1">1</div>
+		<div class="box">2222222222222</div>
+		<div name = "hello">3</div>
+	</body>
+</html>

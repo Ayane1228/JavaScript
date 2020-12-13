@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+			 循环按行顺序为5*5的二维数组，赋值1~25，输出左下半三角形
+			 
+			 二维数组：数组中元素仍为数组
+			 */
+			var count = 0;
+			var arr = [];
+			for (var i = 0; i < 5; i++) {
+				var newarr = [];
+				for (var j = 0; j < 5; j++) {
+					newarr.push(++count);
+				}
+				arr.push(newarr);
+
+			}
+
+			for (var num = 0;num<=arr.length; num++)
+			/* 输出五行 */
+			{
+				for (var N = 0; N <= num; N++) /* 每一行输出个数都和行数相同 */ {
+					document.write(arr[num][N] + "&ensp;");
+				}
+				document.write("<br />");
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

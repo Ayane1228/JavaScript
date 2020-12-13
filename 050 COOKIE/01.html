@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 
+				cookie：储存在用户本地终端上的数据
+				操作：查增删改-->
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 设置cookie docuemnt.cookie = "cookiename = cookie的值;cookie的时效"
+			// 同名的cookie会被覆盖，可以直接设置同名cookie进行修改
+			document.cookie = "cookiename=value;expires="+oDate;
+			var oDate = new Date();
+			oDate.setDate(oDate.getDate()+3);
+			// 3天过期
+			// 查询cookie
+			console.log(document.cookie);
+			// 删除cookie，设置失效时间为负数可以清除cookie
+				
+				
+		</script>
+	</body>
+</html>

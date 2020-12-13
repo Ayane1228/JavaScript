@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				日期对象的格式化方法：
+				日期对象.方法
+			*/
+			var d = new Date();
+			document.write(d.toDateString() + "<br />");
+			// Thu Aug 13 2020
+
+			document.write(d.toTimeString() + "<br />");
+			// 17:03:33 GMT+0800 (中国标准时间)
+			document.write(d.toLocaleDateString() + "<br />");
+			// 2020/8/13
+			document.write(d.toLocaleTimeString() + "<br />");
+			// 下午5:03:33
+			document.write(d.toUTCString() + "<br />");
+			// Thu, 13 Aug 2020 09:03:33 GMT
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

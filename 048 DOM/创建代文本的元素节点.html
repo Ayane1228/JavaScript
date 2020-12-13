@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script type="text/javascript">
+			/* 
+				createElement（）
+				格式： document.creativeElement（标签名）;
+				
+				插入：
+				appendChild（）
+				格式： parent.appendChild（NewNode）
+				功能：将Newnode节点插入到parent子节点的末尾	
+				
+				
+				*/
+			window.onload = function() {
+				var oBtn = document.getElementById("btn");
+				var oDiv = document.getElementById("div1");
+				oBtn.onclick = function() {
+					// 1.创建span节点
+					var node = document.createElement("span");
+					// 2.创建span标价签中的文本内容
+					var oText = document.createTextNode("文本内容");
+					// 3.将文本内容插入到节点中
+					node.appendChild(oText);
+					// 4.将节点插入到oDiv的末尾
+					oDiv.appendChild(node);
+				}
+			}
+			
+			
+			
+			/* 
+				封装一个带文本的元素节点
+			*/
+			function createElementWithTxt (tagName,txt){
+				var node = document.createElement(tagName);
+				var oText = document.createTextNode(txt);
+				return node; 
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<p>111111</p><span>222222</span>
+		</div>
+		<button id="btn">按钮</button>
+	</body>
+</html>

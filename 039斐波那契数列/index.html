@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 斐波那契数列问题：一对兔子四个月生一对兔子
+			// 1-3:1对,
+			// 4月:2对,
+			// 5月:3对,
+			// 6月:4对,
+			// 7月:6对,  
+			// 8月:9对
+			// 9月:13对,
+			// 10月:19对
+			// rabbit(month)=rabbit(month-1)+rabbit(month-3)
+			function rabbit(month){
+				if(month<4){
+					return 1;
+				}
+				return rabbit(month-1)+rabbit(month-3);
+			}alert(rabbit(10));
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

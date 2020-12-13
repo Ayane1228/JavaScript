@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<head>
+<script>
+	/* 
+		数组的indexOf
+		格式：数组.indexOf（元素，index）；
+		使用方式和字符串一致
+	 */
+	// var fruits = ["香蕉", "橙子", "苹果", "甜瓜"];
+	// var a = fruits.indexOf("苹果")
+	// alert(a);
+	
+	/* 
+		forEach（）：
+		功能：数组遍历
+		格式：数组.forEach（function（item，index，array））
+		item 当前遍历到的元素
+		index 当前遍历到的下标
+		array 当前数组*/
+/* 	var arr = [10,20,30]
+	// 调用函数直接对所有元素进行遍历
+	arr.forEach(alert);
+	arr.forEach(function(item, index, array){
+		document.write(item + "<br />");
+		document.write(index + "<br />");
+		document.write(array + "<br />");
+	}) */
+	
+	/* 
+		map；映射
+		遍历==>操作==>返回
+	*/
+	 // 	var arr = [10,20,30];		
+		// var newArr = arr.map(function(item,index,array)
+		// {
+		// 	return item + 2 ;	
+		// })
+		// alert(newArr);
+		
+		/* 
+			reduce：归并
+		*/
+	 //   var arr = [10,20,30,40,50,60];
+	 //  var res = arr.reduce(function(pre,next,index,array)
+	 //   // pre  上一次遍历return后面的值
+	 //   // next 当前遍历到的元素
+		// {
+		// 	alert(pre + "," + next);
+		// 	return pre + next;
+		// })	
+		// 					alert(res);
+		
+		
+		/* 
+			过滤filter
+		*/
+		// var res = [10,20,30,40,50].filter(function(item,index,array){
+			// return item >30;
+		// })
+			// alert(res);
+
+		/* 
+			some:某些
+			如果有一个成功直接返回true，不再进行遍历
+			判断return后面的条件是否成立，如果成立返回true，否则返回false
+		*/
+		
+		// var arr = [10,20,30,40,50];
+		// var res = arr.some(function(item,index,array){
+		// 	return item > 50;
+		// 	/* 返回值：判断return之后的表达式在当前数组中是否成立 ，
+		// 		成立返回true，否则返回false*/
+		// })
+		// alert(res);
+		
+		
+		/* 
+			every：跟some类似，要求每一项都符合就返回true
+			*/
+			
+			var arr = [10,20,30,40,50];
+			var res = arr.every(function(item,index,array){
+				return item > 30;
+				/* 返回值：判断return之后的表达式在当前数组中是否成立 ，
+					成立返回true，否则返回false*/
+			})
+			alert(res);
+		</script>
+	</head>
+<body>
+	
+</body>
+
+
+</html>

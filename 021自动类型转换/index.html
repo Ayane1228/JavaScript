@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+		</title>
+		<script type="text/javascript">
+// 1.字符串和其他数据类型直接用加号相连时,其他数据类型自动转换为字符串。
+
+/* 
+2.任何数据除了和字符串做相加运算外,先要将字符串转为数字再进行运算。
+<1>与NaN做算数运算的结果都是NaN,包括NaN本身和NaN做运算结果也为NaN。
+<2>字符串如果为纯数字字符串的话则自动转换为数字,否则装换为NaN 。
+NaN:这个字符串不是一个数字
+*/
+
+		var test = 1 - "2";
+		alert(test);
+// 结果为-1,当作减法操作的时候,自动将字符串"2"变为数字类型2,所以结果为-1;若运算符为"+"是,结果则会为"12‘。
+		
+		var test2 = 1 + "2";
+		alert(test2);
+		
+/* 		var test3 = 1 - "2a";
+		alert(test3);
+//数字和一个NaN进行非加法运算，结果为NaN */
+		var test4 = NaNNaN;
+		alert(test4);
+// NaN与NaN进行运算,结果仍为NaN
+
+// 1.2个字符串直接用加号相连
+		var tmp1 = "字符串" + "相加";
+		alert(tmp1);
+// 2.数字和字符串用加号相连 ,"2"为字符串，1为数字
+		var tmp2 = "2" + 1;
+		alert(tmp2);
+// 3.字符串和布尔值相加，“........”为字符串，true为布尔值		
+		var tmp3 = "字符串与布尔值"+true;
+		alert(tmp3);
+// 4.特殊数据类型(Undefined null)+字符串		
+		var tmp4 = "字符串" + undefined;
+		alert(tmp4);
+		var tmp5 = "字符串" + null;
+		alert(tmp5);
+	
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

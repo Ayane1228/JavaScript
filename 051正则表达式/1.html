@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+/* 			// 正则表达式的创建
+			var reg = /abc/;
+			// test 方法
+			var flag = reg.test(str);
+			// reg：正则表达式 test：测试方法 str：要检测的字符串，检测字符串中是否有 正则表达式
+			var str = "abcd";
+			console.log(reg);
+			console.log(str);
+			console.log(flag); */
+			// 修饰符g 全局匹配
+			var reg = /abc/g;
+			var str = "abcabc";
+				// match：字符串方法
+			console.log(str.match(reg));
+			// i修饰符忽略大小写
+			var reg1 = /abc/gi;
+			var str1 = "AbcAbc";
+			console.log(str1.match(reg1));
+			// search 方法 查找符合规则的子串的位置 只返回一个匹配的位置
+			var reg2 = /abc/;
+			var str2 = "0123456789abc";
+			console.log(str2.search(reg2));
+			// split分割字符串
+			var reg3 = /good/g;
+			var str3 = "good good study";
+			console.log(str3.split(reg3));
+			// replace替换方法
+			var reg4 = /good/ig;
+			var str4 = "good good study";
+			console.log(str3.replace(reg4,"TMD"));
+			// exec：正则表达式的方法，将匹配成功的内容放到数组，没有成功那就为null
+			// split分割字符串
+			var reg4 = /good/ig;
+			var str4 = "good good study";
+			console.log(reg4.exec(str4));
+			console.log(reg4.exec(str4));
+			// 和match方法的区别：不管有没有加全局表达式 g 都只会返回第一个匹配的数组，多次调用会从上次的结束的位置开始
+		</script>
+	</body>
+</html>

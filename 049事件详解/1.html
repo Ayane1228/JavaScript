@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+
+				width: 200px;
+				height: 200px;
+				background-color: #0000FF;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id="txt">	
+		</div>
+	</body>
+	<script type="text/javascript">
+		var oDiv = document.getElementById("txt");
+		oDiv.onclick = function(e){
+			var evt = e || event;
+			console.log(evt.clientX,evt.clientY);
+			/* 	
+				距离可视区域的值
+				
+			*/
+			console.log(evt.pageX,evt.pageY);
+			/* 
+					距离页面的左边距和顶部的距离(*滚动条)
+			*/
+		   console.log(evt.offsetX,evt.offsetY);
+		   /*
+					鼠标距离事件源的左边距和顶部距离
+					*/
+		}
+	</script>
+</html>

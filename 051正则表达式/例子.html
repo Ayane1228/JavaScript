@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 用户名要求：只能使用数字字母下划线，不能以数字开头的6~15位字符 -->
+		用户名:<input type="text" id="usename"/>（只能使用数字字母下划线，不能以数字开头的6~15位字符）
+		<script type="text/javascript">
+			var oInput = document.getElementById("usename");
+			oInput.onchange = function(){
+				var val = this.value;
+				var reg = /^[a-zA-Z_]\w{5,14}$/;
+				if(reg.test(val)){
+					console.log("格式正确");
+				}else{
+					console.log("格式错误");
+				}
+			}
+		</script>
+	</body>
+</html>

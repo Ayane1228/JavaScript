@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				assign（） ：跳转至指定url
+				reload（）：重载当前的url，如果传参，参数为true时，强制加载 （不通过浏览数据缓存）
+				replace（）：替换，用新的url替换当前的页面，可以避免产生跳转前的历史记录
+				*/
+			window.onload = function() {
+				var oBTN = document.getElementById("btn");
+				oBTN.onclick = function() {
+					location.replace("https://www.baidu.com/")
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="按钮" id="btn"/>
+	</body>
+</html>

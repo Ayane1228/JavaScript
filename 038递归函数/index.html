@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 递归：函数自己调用自己
+			 【特点】1.必须有参数
+					2.必须有return
+					3.短时间内调用多个函数，使得内存剧增，直到临界值才释放
+			 
+			 1.去找临界值，即无需计算获得的值
+			 2.找这一次和上一次的关系
+			 3.假设当前函数以及可以使用，
+			 调用自身计算上一次的运行结果，再写出这次的结果*/
+		
+		// 1+到n的和 sum（100）=sum（99）+100；
+		// ==>sum(n)=sum(n-1)+n;
+		// 输入sum=100,先判断是否等1不等于返回sum(99)+100,一直调用知道n=1,返回1
+		
+		function sum(n){
+			if(n == 1){
+				return 1;
+			}
+			return sum(n-1) + n;
+			
+		}
+		alert(sum(100));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				1.concat（）
+				 格式：数组.concat（）
+				 功能：将两个数组合并为一个新数组，且不改变原数组
+				 返回值：合并后的新数组，
+				 参数：要合并的数组*/
+				 
+				 // var arr1 = ["the shy" , "rookie"];
+				 // var arr2 = ["baolan","west"];
+				 // var arr3 =arr1.concat(arr2);
+				 // document.write(arr1 + "<br />");
+				 // document.write(arr2 + "<br />");
+				 // document.write(arr3 + "<br />");
+				 /* 
+					slice()
+					格式：数组.slice（start，end）；
+					功能：基于当前数组获取指定区域元素并创建一个新数组，原数组不改变
+					参数：开始时的下标，结束时的下标
+					返回值：指定区域元素生成的新数组*/
+					// var arr1 = ["the shy" , "rookie","baolan","west","duke"];
+					// var arr2 = arr1.slice(0,2)
+					// document.write(arr1 + "<br />");
+					// document.write(arr2 + "<br />");
+					
+					
+					
+					
+					
+					/* 
+						splice（）
+						格式：数组.space（start，length，元素...）
+						功能：可以完成删除，插入，替换操作
+						参数：
+							参数1： 截取的下标
+							参数2：截取的长度
+							参数3：在截取的开始下标位置，我们要插入的元素，插入元素个数随意
+					*/
+				   // 删除功能，返回值：截取掉的元素组成的数组
+				   // 插入功能，多个元素
+				   // 替换功能，先删除再插入
+				   
+				   var arr = ["0","1","2"];
+				   arr.splice(1,1)
+				   document.write(arr + "<br />");
+				   
+				   
+				   /* 不需要参数2，截取长度为0*/
+				   var arr1 = ["0","1","2","?"];
+				   arr1.splice(1,0,"4")
+				   document.write(arr1 + "<br />");
+				   
+				   // 替换功能，先删除再插入
+				  var arr3 = ["0","1","2"];
+				  arr3.splice(1,1,"4")
+				  document.write(arr3 + "<br />"); 
+				   
+
+				   
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

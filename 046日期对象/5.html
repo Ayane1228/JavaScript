@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload= function(){
+				var oBtn = document.getElementById("btn");
+				var oDiv = document.getElementById("nmd");
+				oBtn.onclick = function(){
+					alert(oDiv.innerHTML);
+					//获取div内容	
+					oDiv.innerHTML = "</h2>我爱你</h2>";
+					// 修改div'内容
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="nmd"><h1>風の記憶</h1></div>
+		<input type="button" id="btn" value="按钮" />
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				insertBefore（）
+				格式： 父节点.insertBefore（插入的节点，旧节点）
+				功能： 将节点插入到旧节点之前*/
+				
+				
+				
+			function createElementWithTxt(tagName, txt) {
+				var node = document.createElement(tagName);
+				var oText = document.createTextNode(txt);
+				node.appendChild(oText);
+				return node;
+			}
+
+			window.onload = function() {
+
+				// 创建一个<strong></strong>插入到span节点之前
+				// 1.创建<strong></strong>
+				var node = createElementWithTxt("strong", "strong文本");
+				// 2.通过docuement.getElementsByTagName()获取span节点
+				var oSpan = document.getElementsByTagName("span")[0];
+				// 3.通过oSpan.parentNode（span的父节点）调用inserbefore方法
+				// oSpan.parentNode.insertBefore(node, oSpan);
+				insertAfter(node,oSpan);
+			}
+
+			function insertAfter(newNode, oldNode) {
+				// 判断oldNode是否是最后一个节点	
+				// 1.获取oldNode的panentNode
+				var parent = oldNode.parentNode;
+				// 2.判断oldNode是否是parentNode的最后一个孩子节点
+				if (oldNode == parent.lastChild) {
+					// 3.如果是调用parent.appendchild（newNode）插入到末尾
+					parent.appendChild(newNode);
+				} else {
+					// 4.否则插入到oldNode的下一个节点（oldNode.nextSibling）之前
+					parent.insertBefore(newNode, oldNode.nextSibling);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<P>p</P>
+			<span>span</span>
+			<em>em</em>
+		</div>
+	</body>
+</html>

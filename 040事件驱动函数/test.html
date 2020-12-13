@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				// 获取按钮和文本框的id，定义事件驱动函数的名字
+				var oBtn = document.getElementById("btn");
+				var oTxt = document.getElementById("test");
+				// 给按钮添加事件驱动函数
+				oBtn.onclick = function(){
+					// 事件驱动函数为单击时将文本框清空 
+					oTxt.value = "";
+		 	
+			}
+				}
+		</script>
+	</head>
+	<body>
+		<input type="text" value="默认文字" id="test" />
+		<input type="button" value="清空" id="btn" />
+	</body>
+</html>
